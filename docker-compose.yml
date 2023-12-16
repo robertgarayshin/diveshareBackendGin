@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    container_name: driveshare_app
+    build: .
+    ports:
+      - 8080:8080
+    restart: on-failure
+    depends_on:
+      - driveshare-postgres
+    environment:
+      - DB_PASSWORD=passphrase
+    networks:
+      - driveshareNet
+
+
+  driveshare-postgres:
+    image: postgres:latest
+    container_name: driveshare_db_postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=passphrase
+      - POSTGRES_DB=driveshare_db
+    ports:
+      - '5432:5432'
+    networks:
+      - driveshareNet
+
+networks:
+  driveshareNet:
+    driver: bridge

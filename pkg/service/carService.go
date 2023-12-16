@@ -10,28 +10,23 @@ type CarService struct {
 }
 
 func (c CarService) Create(car model.Car) (int, error) {
-	//TODO implement me
-	panic("implement me")
+	return c.repo.Create(car)
 }
 
 func (c CarService) GetAll() ([]model.Car, error) {
-	//TODO implement me
-	panic("implement me")
+	return c.repo.GetAll()
 }
 
 func (c CarService) GetById(carId int) (model.Car, error) {
-	//TODO implement me
-	panic("implement me")
+	return c.repo.GetById(carId)
 }
 
 func (c CarService) Update(carId int, input model.UpdateCarInput) error {
-	//TODO implement me
-	panic("implement me")
+	return c.repo.Update(carId, input)
 }
 
 func (c CarService) Delete(carId int) error {
-	//TODO implement me
-	panic("implement me")
+	return c.repo.Delete(carId)
 }
 
 func NewCarService(repo repository.Car) *CarService {

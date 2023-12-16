@@ -10,28 +10,23 @@ type RentService struct {
 }
 
 func (r RentService) Create(rent model.Rent) (int, error) {
-	//TODO implement me
-	panic("implement me")
+	return r.repo.Create(rent)
 }
 
 func (r RentService) GetAll() ([]model.Rent, error) {
-	//TODO implement me
-	panic("implement me")
+	return r.repo.GetAll()
 }
 
 func (r RentService) GetById(rentId int) (model.Rent, error) {
-	//TODO implement me
-	panic("implement me")
+	return r.repo.GetById(rentId)
 }
 
 func (r RentService) Update(rentId int, input model.UpdateRentInput) error {
-	//TODO implement me
-	panic("implement me")
+	return r.repo.Update(rentId, input)
 }
 
 func (r RentService) Delete(rentId int) error {
-	//TODO implement me
-	panic("implement me")
+	return r.repo.Delete(rentId)
 }
 
 func NewRentService(repo repository.Rent) *RentService {

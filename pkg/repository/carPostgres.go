@@ -12,10 +12,10 @@ type CarPostgres struct {
 
 func (c CarPostgres) Create(car model.Car) (int, error) {
 	var id int
-	query := fmt.Sprintf("INSERT INTO %s (category, brand, model, owner_id, price, produced_year,"+
-		"status, car_rating, created_at) VALUES ($1, $2, $3, $4, $5, $6, 'FREE', 0.0, now()) RETURNING id", CarsTable)
-	row := c.db.QueryRow(query, "SELLER", car.Category,
-		car.Brand, car.Model, car.Owner.Id, car.Price, car.Produced)
+	query := fmt.Sprintf(`INSERT INTO %s (category, brand, model, owner_id, price, produced_year,
+		status, car_rating, created_at) VALUES ($1, $2, $3, $4, $5, $6, 'FREE', 0.0, now()) RETURNING id`, CarsTable)
+	row := c.db.QueryRow(query, car.Category,
+		car.Brand, car.Model, car.Owner, car.Price, car.Produced)
 	if err := row.Scan(&id); err != nil {
 		return 0, err
 	}
@@ -24,8 +24,8 @@ func (c CarPostgres) Create(car model.Car) (int, error) {
 
 func (c CarPostgres) GetAll() ([]model.Car, error) {
 	var cars []model.Car
-	query := fmt.Sprintf(`SELECT category, brand, model, o.name, o.surname, price, produced_year, 
-		status, car_rating FROM %s c JOIN users o on c.owner_id = o.id ORDER BY ID`, CarsTable)
+	query := fmt.Sprintf(`SELECT category, brand, model, owner_id, price, produced_year, 
+		status, car_rating FROM %s c ORDER BY c.id`, CarsTable)
 	if err := c.db.Select(&cars, query); err != nil {
 		return nil, err
 	}
@@ -35,9 +35,9 @@ func (c CarPostgres) GetAll() ([]model.Car, error) {
 
 func (c CarPostgres) GetById(carId int) (model.Car, error) {
 	var car model.Car
-	query := fmt.Sprintf(`SELECT category, brand, model, o.name, o.surname, price, produced_year, 
-		status, car_rating FROM %s c JOIN users o on c.owner_id = o.id where c.id = $1 ORDER BY ID`, CarsTable)
-	if err := c.db.Select(&car, query, carId); err != nil {
+	query := fmt.Sprintf(`SELECT category, brand, model, owner_id, price, produced_year, 
+		status, car_rating FROM %s where id = $1 ORDER BY id`, CarsTable)
+	if err := c.db.Get(&car, query, carId); err != nil {
 		return model.Car{}, err
 	}
 	return car, nil

@@ -16,7 +16,7 @@ func NewUserPostgres(db *sqlx.DB) *UserPostgres {
 
 func (r *UserPostgres) GetAll() ([]model.User, error) {
 	var users []model.User
-	query := fmt.Sprintf(`SELECT email, user_role, name, surname FROM %s`, UsersTable)
+	query := fmt.Sprintf(`SELECT id, username, user_role, name, surname FROM %s`, UsersTable)
 	if err := r.db.Select(&users, query); err != nil {
 		return nil, err
 	}
@@ -25,14 +25,12 @@ func (r *UserPostgres) GetAll() ([]model.User, error) {
 }
 
 func (r *UserPostgres) GetById(userId int) (model.User, error) {
-	fmt.Println("Im in repo")
 	var user model.User
 	query := fmt.Sprintf(`SELECT username, user_role, name, surname FROM %s WHERE id = $1`,
 		UsersTable)
 	if err := r.db.Get(&user, query, userId); err != nil {
 		return user, err
 	}
-	fmt.Println(user)
 	return user, nil
 }
 

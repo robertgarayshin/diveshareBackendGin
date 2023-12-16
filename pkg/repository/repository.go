@@ -34,7 +34,7 @@ type Rent interface {
 }
 
 type Review interface {
-	Create(rent model.Review) (int, error)
+	Create(review model.Review) (int, error)
 	GetAll() ([]model.Review, error)
 	GetById(reviewId int) (model.Review, error)
 	Update(reviewId int, input model.UpdateReviewInput) error

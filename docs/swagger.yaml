@@ -15,6 +15,98 @@ definitions:
     - password
     - username
     type: object
+  handler.statusResponse:
+    properties:
+      status:
+        type: string
+    type: object
+  model.Car:
+    properties:
+      brand:
+        type: string
+      category:
+        type: string
+      id:
+        type: integer
+      model:
+        type: string
+      owner:
+        type: integer
+      price:
+        type: number
+      produced:
+        type: string
+      rating:
+        type: number
+      status:
+        type: string
+    type: object
+  model.Rent:
+    properties:
+      id:
+        type: integer
+      rentBegin:
+        type: string
+      rentEnd:
+        type: string
+      renter:
+        type: integer
+      seller:
+        type: integer
+    type: object
+  model.Review:
+    properties:
+      from:
+        type: integer
+      id:
+        type: integer
+      rating:
+        type: number
+      reviewDatetime:
+        type: string
+      text:
+        type: string
+      to:
+        type: integer
+    type: object
+  model.UpdateCarInput:
+    properties:
+      brand:
+        type: string
+      category:
+        type: string
+      model:
+        type: string
+      price:
+        type: number
+      produced:
+        type: string
+      status:
+        type: string
+    type: object
+  model.UpdateRentInput:
+    properties:
+      rentBegin:
+        type: string
+      rentEnd:
+        type: string
+    type: object
+  model.UpdateReviewInput:
+    properties:
+      rating:
+        type: number
+      text:
+        type: string
+    type: object
+  model.UpdateUserInput:
+    properties:
+      email:
+        type: string
+      name:
+        type: string
+      surname:
+        type: string
+    type: object
   model.User:
     properties:
       confirmationToken:
@@ -121,7 +213,651 @@ paths:
       summary: SignUp
       tags:
       - auth
+  /car/:
+    get:
+      consumes:
+      - application/json
+      description: get all cars
+      operationId: get-cars
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Car'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get All Cars
+      tags:
+      - cars
+  /car/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete car by id
+      operationId: delete-car-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Delete Car
+      tags:
+      - cars
+    get:
+      consumes:
+      - application/json
+      description: get car by id
+      operationId: get-car-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Car'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get car by id
+      tags:
+      - cars
+    put:
+      consumes:
+      - application/json
+      description: edit car
+      operationId: edit-car
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: car info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.UpdateCarInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Edit car
+      tags:
+      - cars
+  /car/new:
+    post:
+      consumes:
+      - application/json
+      description: create car
+      operationId: create-car
+      parameters:
+      - description: car info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Car'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: New Car
+      tags:
+      - cars
+  /rent/:
+    get:
+      consumes:
+      - application/json
+      description: get all rents
+      operationId: get-rents
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Rent'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get All Rents
+      tags:
+      - rents
+  /rent/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete rent by id
+      operationId: delete-rent-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Delete rent
+      tags:
+      - rents
+    get:
+      consumes:
+      - application/json
+      description: get rent by id
+      operationId: get-rent-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Rent'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get rent by id
+      tags:
+      - rents
+    put:
+      consumes:
+      - application/json
+      description: edit rent
+      operationId: edit-rent
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: rent info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.UpdateRentInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Edit rent
+      tags:
+      - rents
+  /rent/new:
+    post:
+      consumes:
+      - application/json
+      description: create rent
+      operationId: create-rent
+      parameters:
+      - description: rent info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Rent'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: New Rent
+      tags:
+      - rents
+  /review/:
+    get:
+      consumes:
+      - application/json
+      description: get all reviews
+      operationId: get-reviews
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Review'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get All Reviews
+      tags:
+      - reviews
+  /review/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete review by id
+      operationId: delete-review-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Delete review
+      tags:
+      - reviews
+    get:
+      consumes:
+      - application/json
+      description: get review by id
+      operationId: get-review-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Review'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get review by id
+      tags:
+      - reviews
+    put:
+      consumes:
+      - application/json
+      description: edit review
+      operationId: edit-rent
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: rent info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.UpdateReviewInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Edit review
+      tags:
+      - reviews
+  /review/new:
+    post:
+      consumes:
+      - application/json
+      description: create review
+      operationId: create-review
+      parameters:
+      - description: rent info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.Review'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: New Review
+      tags:
+      - reviews
+  /user/:
+    get:
+      consumes:
+      - application/json
+      description: get all users
+      operationId: get-users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get All Users
+      tags:
+      - users
   /user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete user by id
+      operationId: delete-user-by-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Delete User
+      tags:
+      - users
     get:
       consumes:
       - application/json
@@ -157,6 +893,49 @@ paths:
           schema:
             $ref: '#/definitions/handler.errorResponse'
       summary: Get User By Id
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: edit profile
+      operationId: edit-profile
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/model.UpdateUserInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.statusResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Edit Profile
       tags:
       - users
 securityDefinitions:

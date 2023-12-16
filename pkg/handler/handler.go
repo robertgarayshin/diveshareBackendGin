@@ -52,11 +52,11 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	}
 	review := router.Group("/review")
 	{
-		review.POST("/new")
-		review.GET("/")
-		review.GET("/:id")
-		review.PUT("/:id")
-		review.DELETE("/:id")
+		review.POST("/new", h.NewReview)
+		review.GET("/", h.GetAllReviews)
+		review.GET("/:id", h.GetReviewById)
+		review.PUT("/:id", h.EditReview)
+		review.DELETE("/:id", h.DeleteReview)
 	}
 
 	return router

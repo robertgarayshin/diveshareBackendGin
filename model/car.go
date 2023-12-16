@@ -5,7 +5,7 @@ type Car struct {
 	Category string
 	Brand    string
 	Model    string
-	Owner    User
+	Owner    int `db:"owner_id"`
 	Price    float32
 	Produced string `db:"produced_year"`
 	Status   string
