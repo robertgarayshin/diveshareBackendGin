@@ -10,3 +10,8 @@ type Rent struct {
 	Renter    User
 	Car       //TODO: добавить в бд информацию о машине
 }
+
+type UpdateRentInput struct {
+	RentBegin time.Time
+	RentEnd   time.Time
+}

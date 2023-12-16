@@ -3,7 +3,6 @@ package service
 import (
 	"diveshareBackendGin/model"
 	"diveshareBackendGin/pkg/repository"
-	"fmt"
 )
 
 type UserService struct {
@@ -19,7 +18,6 @@ func (s *UserService) GetAll() ([]model.User, error) {
 }
 
 func (s *UserService) GetById(userId int) (model.User, error) {
-	fmt.Println("Im in service")
 	return s.repo.GetById(userId)
 }
 
@@ -27,6 +25,6 @@ func (s *UserService) Delete(userId int) error {
 	return s.repo.Delete(userId)
 }
 
-func (s *UserService) Update(userId int, input model.User) error {
+func (s *UserService) Update(userId int, input model.UpdateUserInput) error {
 	return s.repo.Update(userId, input)
 }

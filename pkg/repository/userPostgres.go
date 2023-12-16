@@ -43,6 +43,6 @@ func (r *UserPostgres) Delete(userId int) error {
 	return err
 }
 
-func (r *UserPostgres) Update(userId int, input model.User) error {
+func (r *UserPostgres) Update(userId int, input model.UpdateUserInput) error {
 	return nil
 }

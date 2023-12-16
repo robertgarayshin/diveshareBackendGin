@@ -10,3 +10,9 @@ type User struct {
 	ConfirmationToken string
 	PasswordHash      string `db:"password_hash"`
 }
+
+type UpdateUserInput struct {
+	Username string `json:"email"`
+	Name     string `json:"name"`
+	Surname  string `json:"surname"`
+}

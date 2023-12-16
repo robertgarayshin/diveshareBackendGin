@@ -10,3 +10,8 @@ type Review struct {
 	Rating         float32
 	Text           string
 }
+
+type UpdateReviewInput struct {
+	Rating float32
+	Text   string
+}

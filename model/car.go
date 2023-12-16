@@ -11,3 +11,12 @@ type Car struct {
 	Status   string
 	Rating   float32
 }
+
+type UpdateCarInput struct {
+	Category string
+	Brand    string
+	Model    string
+	Price    float32
+	Produced string
+	Status   string
+}
