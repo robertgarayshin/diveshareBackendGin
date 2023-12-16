@@ -2,7 +2,7 @@ port: "8080"
 
 db:
   username: "admin"
-  host: "localhost"
+  host: "driveshare_db_postgres"
   port: "5432"
   dbname: "driveshare_db"
   sslmode: "disable"
