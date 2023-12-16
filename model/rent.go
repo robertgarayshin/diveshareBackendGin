@@ -1,0 +1,12 @@
+package model
+
+import "time"
+
+type Rent struct {
+	RentId    int
+	RentBegin time.Time
+	RentEnd   time.Time
+	Seller    Seller
+	Renter    User
+	Car       //TODO: добавить в бд информацию о машине
+}
