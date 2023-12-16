@@ -5,11 +5,11 @@ type Car struct {
 	Category string
 	Brand    string
 	Model    string
-	Owner    Seller
+	Owner    User
 	Price    float32
-	Produced string
+	Produced string `db:"produced_year"`
 	Status   string
-	Rating   float32
+	Rating   float32 `db:"car_rating"`
 }
 
 type UpdateCarInput struct {

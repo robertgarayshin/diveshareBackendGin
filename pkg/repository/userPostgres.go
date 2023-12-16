@@ -44,5 +44,8 @@ func (r *UserPostgres) Delete(userId int) error {
 }
 
 func (r *UserPostgres) Update(userId int, input model.UpdateUserInput) error {
-	return nil
+	query := fmt.Sprintf(`UPDATE %s SET username = $1, name = $2, surname = $3, updated_at = now() WHERE id = $4`,
+		UsersTable)
+	_, err := r.db.Exec(query, input.Username, input.Name, input.Surname, userId)
+	return err
 }

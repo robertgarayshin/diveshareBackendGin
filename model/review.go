@@ -5,7 +5,7 @@ import "time"
 type Review struct {
 	Id             int
 	From           User
-	To             Seller
+	To             Car
 	ReviewDatetime time.Time
 	Rating         float32
 	Text           string
