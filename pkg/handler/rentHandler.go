@@ -53,13 +53,13 @@ func (h *Handler) NewRent(c *gin.Context) {
 // @Failure default {object} errorResponse
 // @Router /rent/ [get]
 func (h *Handler) GetAllRents(c *gin.Context) {
-	cars, err := h.services.Rent.GetAll()
+	rents, err := h.services.Rent.GetAll()
 	if err != nil {
 		logrus.Print(err)
 		newErrorResponse(c, http.StatusInternalServerError, "internal error")
 		return
 	}
-	c.JSON(http.StatusOK, cars)
+	c.JSON(http.StatusOK, rents)
 }
 
 // GetRentById
