@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>Driveshare</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <style> {{.Style }}</style>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <a href="/">
+            <div id="headerText">DRIVESHARE</div>
+        </a>
+        <div id="navbar">
+            <ul class="navbarItems">
+                <a href="/">
+                    <li id="navbarItem1">Главная</li>
+                </a>
+                <li id="navbarItem2">
+                    <a href="catalog"><p id="item2">Каталог</p></a>
+                    <ul id="dropdownMenu">
+                        <a href="catalog"
+                        >
+                            <li class="dropdownText ec">Эконом</li>
+                        </a
+                        >
+                        <a href="catalog">
+                            <li class="dropdownText comf">
+                                Комфорт
+                                <ul id="level2">
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Suzuki</li>
+                                    </a
+                                    >
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Toyota</li>
+                                    </a
+                                    >
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Volvo</li>
+                                    </a
+                                    >
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Москвич</li>
+                                    </a
+                                    >
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Nissan</li>
+                                    </a
+                                    >
+                                    <a href="catalog"
+                                    >
+                                        <li class="dropdownText">Opel</li>
+                                    </a
+                                    >
+                                </ul>
+                            </li>
+                        </a
+                        >
+                        <a href="catalog">
+                            <li class="dropdownText">Бизнес</li>
+                        </a>
+                        <a href="catalog">
+                            <li class="dropdownText">Premium</li>
+                        </a>
+                        <a href="catalog"
+                        >
+                            <li class="dropdownText">Внедорожники</li>
+                        </a
+                        >
+                        <a href="catalog"
+                        >
+                            <li class="dropdownText">Уникальные</li>
+                        </a
+                        >
+                    </ul>
+                </li>
+                <a href="share">
+                    <li id="navbarItem3">Сдать авто</li>
+                </a>
+                <a href="about">
+                    <li id="navbarItem4">О нас</li>
+                </a>
+                <a href="contact">
+                    <li id="navbarItem5">Контакты</li>
+                </a>
+                <li id="navbarItem6">войти</li>
+            </ul>
+        </div>
+    </div>
+    <div id="imageContainer">
+        <img
+                id="mainImage"
+                src="images/main_dimitar-donovski-yrjB4dYWUZU-unsplash%201.png"
+        />
+        <div id="imageRect">
+            <p id="imageRectText1">
+                Арендуйте автомобиль <br/>
+                <span id="imageRectText2">в несколько кликов</span>
+            </p>
+            <p id="city">Город</p>
+            <p id="begin">Начало</p>
+            <p id="end">Окончание</p>
+            <div id="cityRect">
+                <img class="vectorImg" src="images/main_City.svg"/>
+                <p class="rectText city">Город</p>
+            </div>
+            <div id="beginRect">
+                <img class="vectorImg" src="images/main_Date.svg"/>
+                <p class="rectText date">Дата</p>
+                <p class="rectText time">Время</p>
+                <div class="rectLine"></div>
+            </div>
+            <div id="endRect">
+                <img class="vectorImg" src="images/main_Date.svg"/>
+                <p class="rectText date">Дата</p>
+                <p class="rectText time">Время</p>
+                <div class="rectLine"></div>
+            </div>
+            <a href="catalog">
+                <div id="findRect"></div>
+            </a>
+        </div>
+    </div>
+    <div id="columns">
+        <a href="catalog"
+        >
+            <div id="econ">
+                <img
+                        class="cardImg"
+                        src="images/main_pngwing%209.png"
+                        style="position: absolute; top: -140px"
+                />
+                <p class="autoClass">Эконом</p>
+                <p class="priceCol">700₽ - 2999₽</p>
+            </div>
+        </a
+        >
+        <a href="catalog"
+        >
+            <div id="comfort">
+                <img
+                        class="cardImg"
+                        src="images/main_pngwing%205.png"
+                        style="position: absolute; top: -145px"
+                />
+                <p class="autoClass">Комфорт</p>
+                <p class="priceCol">3000₽ - 4999₽</p>
+            </div>
+        </a
+        >
+        <a href="catalog"
+        >
+            <div id="business">
+                <img
+                        class="cardImg"
+                        src="images/main_pngwing%208.png"
+                        style="position: absolute; top: -143px"
+                />
+                <p class="autoClass">Бизнес</p>
+                <p class="priceCol">От 5000₽</p>
+            </div>
+        </a
+        >
+
+        <a href="catalog"
+        >
+            <div id="premium">
+                <img
+                        class="cardImg"
+                        src="images/main_pngwing%2012.png"
+                        style="position: absolute; top: -120px"
+                />
+                <p class="autoClass">Премиум</p>
+                <p class="priceCol">От 9000₽</p>
+            </div>
+        </a
+        >
+        <a href="catalog"
+        >
+            <div id="offroad">
+                <img class="cardImg" src="images/main_pngwing%2011.png"/>
+                <p class="autoClass">Внедорожники</p>
+                <p class="priceCol">От 1590₽</p>
+            </div>
+        </a
+        >
+        <a href="catalog"
+        >
+            <div id="unique">
+                <img
+                        class="cardImg"
+                        src="images/main_pngwing%2013.png"
+                        style="position: absolute; top: -120px"
+                />
+                <p class="autoClass" style="width: 230px">Уникальные авто</p>
+                <p class="priceCol">От 4000₽</p>
+            </div>
+        </a
+        >
+    </div>
+    <div id="newAutos">
+        <div id="newLogo">
+            <p id="newTextInLogo">NEW</p>
+        </div>
+        <p id="newText">Новинки в каталоге</p>
+
+        <a href="auto"
+        >
+            <div class="slide first">
+                <div class="newRect">
+                    <img class="newImage" src="images/main_image%201.png"/>
+                    <p class="model">Omoda C5, 2022</p>
+                    <img class="star" src="images/main_Star.svg"/>
+                    <p class="akcia">Акция</p>
+                    <div class="line"></div>
+                    <p class="price">От 3398₽ / сутки</p>
+                </div>
+            </div>
+        </a
+        >
+
+        <a href="auto"
+        >
+            <div class="slide second">
+                <div class="newRect">
+                    <img class="newImage" src="images/main_image%202.png"/>
+                    <p class="model">Mini Coupe, 2014</p>
+                    <img class="star" src="images/main_Star.svg"/>
+                    <p class="novinka">Новинка</p>
+                    <div class="line"></div>
+                    <p class="price">От 4392₽ / сутки</p>
+                </div>
+            </div>
+        </a
+        >
+
+        <a href="auto"
+        >
+            <div class="slide third">
+                <div class="newRect">
+                    <img class="newImage" src="images/main_image%203.png"/>
+                    <p class="model">Mercedes-Benz E-Class, 2014</p>
+                    <img class="star" src="images/main_Star.svg"/>
+                    <p class="novinka">Новинка</p>
+                    <div class="line"></div>
+                    <p class="price">От 4792₽ / сутки</p>
+                </div>
+            </div>
+        </a
+        >
+
+        <a href="auto"
+        >
+            <div class="slide">
+                <div class="cx7">
+                    <div class="newRect">
+                        <img class="newImage" src="images/main_image%204.png"/>
+                        <p class="model">Mazda CX-7, 2008</p>
+                        <img class="star" src="images/main_Star.svg"/>
+                        <p class="novinka">Новинка</p>
+                        <div class="line"></div>
+                        <p class="price">От 2925₽ / сутки</p>
+                    </div>
+                </div>
+            </div>
+        </a
+        >
+
+        <a href="auto"
+        >
+            <div class="slide">
+                <div class="coolray">
+                    <div class="newRect">
+                        <img class="newImage" src="images/main_image%206.png"/>
+                        <p class="model">Geely Coolray, 2023</p>
+                        <img class="star" src="images/main_Star.svg"/>
+                        <p class="novinka">Новинка</p>
+                        <div class="line"></div>
+                        <p class="price">От 3992₽ / сутки</p>
+                    </div>
+                </div>
+            </div>
+        </a
+        >
+        <img id="arrowLeft" src="images/main_Arrow%202.svg"/>
+        <img id="arrowRight" src="images/main_Arrow%201.svg"/>
+    </div>
+    <div id="imageContainer2">
+        <img
+                id="image2"
+                src="images/main_jorgen-frog-vassli-b3tF2I203Bc-unsplash%201.png"
+        />
+        <div id="image2Rect">
+            <p id="rectText">Сделайте свой автомобиль прибыльным!</p>
+            <p id="rectText2">
+                Станьте арендодателем - добавьте свой автомобиль на DriveShare и
+                зарабатывайте дополнительные деньги каждый месяц.
+            </p>
+            <a href="share"
+            >
+                <div id="moreButton">
+                    <p id="moreText">Узнать больше</p>
+                </div>
+            </a
+            >
+        </div>
+    </div>
+    <div id="footer">
+        <a href="/"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 57px; left: 132px"
+            >
+                Главная
+            </div>
+        </a
+        >
+        <a href="catalog"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 106px; left: 132px"
+            >
+                Каталог
+            </div>
+        </a
+        >
+        <a href="about"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 155px; left: 132px"
+            >
+                О нас
+            </div>
+        </a
+        >
+        <a href="contact"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 204px; left: 132px"
+            >
+                Контакты
+            </div>
+        </a
+        >
+        <a href="share"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 57px; left: 856px"
+            >
+                Сдать авто
+            </div>
+        </a
+        >
+        <a href="description"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 106px; left: 856px"
+            >
+                Как это работает
+            </div>
+        </a
+        >
+        <a href="safety"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 155px; left: 856px"
+            >
+                Безопасность
+            </div>
+        </a
+        >
+        <a href="faq"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 204px; left: 856px"
+            >
+                FAQ
+            </div>
+        </a
+        >
+        <a href="blog"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 57px; left: 1511px"
+            >
+                Блог
+            </div>
+        </a
+        >
+        <a href="upgrade"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 106px; left: 1511px"
+            >
+                Устойчивое развитие
+            </div>
+        </a
+        >
+        <a href="career"
+        >
+            <div
+                    class="footerText"
+                    style="position: absolute; top: 155px; left: 1511px"
+            >
+                Карьера
+            </div>
+        </a
+        >
+        <div id="copyright">© 2023 ООО «Драйвшер»</div>
+    </div>
+</div>
+<script> {{.Script}}</script>
+</body>
+</html>

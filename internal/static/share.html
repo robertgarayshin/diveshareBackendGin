@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Сдать авто - Driveshare</title>
+    <link rel="stylesheet" href="src/styles/share.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>{{.Style}}</style>
+  </head>
+  <body>
+    <script src="src/scripts/share.js"></script>
+    <div id="container">
+      <div id="header">
+        <a href="/"><div id="headerText">DRIVESHARE</div></a>
+        <div id="navbar">
+          <ul class="navbarItems">
+            <a href="/"><li id="navbarItem1">Главная</li></a>
+            <li id="navbarItem2">
+              <a href="catalog"><p id="item2">Каталог</p></a>
+              <ul id="dropdownMenu">
+                <a href="catalog"
+                  ><li class="dropdownText ec">Эконом</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText comf">
+                    Комфорт
+                    <ul id="level2">
+                      <a href="catalog"
+                        ><li class="dropdownText">Suzuki</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Toyota</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Volvo</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Москвич</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Nissan</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Opel</li></a
+                      >
+                    </ul>
+                  </li></a
+                >
+                <a href="catalog"><li class="dropdownText">Бизнес</li></a>
+                <a href="catalog"><li class="dropdownText">Premium</li></a>
+                <a href="catalog"
+                  ><li class="dropdownText">Внедорожники</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText">Уникальные</li></a
+                >
+              </ul>
+            </li>
+            <a href="share"><li id="navbarItem3">Сдать авто</li></a>
+            <a href="about"><li id="navbarItem4">О нас</li></a>
+            <a href="contact"><li id="navbarItem5">Контакты</li></a>
+            <li id="navbarItem6">войти</li>
+          </ul>
+        </div>
+      </div>
+      <div id="imageContainer">
+        <img id="phone" src="images/mockup 1.png" />
+        <div
+          style="
+            position: absolute;
+            top: 86px;
+            left: 835px;
+            color: #000;
+            font-family: Montserrat;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 111.9%; /* 71.616px */
+            width: 871px;
+            height: 290px;
+            flex-shrink: 0;
+          "
+        >
+          Сдавайте свою машину<br />в аренду в Москве<br />и зарабатывайте<br />
+          <span
+            style="
+              color: #ad304b;
+              font-family: Montserrat;
+              font-size: 64px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 111.9%;
+            "
+            >от 50 000 ₽/мес.</span
+          >
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 424px;
+            left: 835px;
+            width: 932px;
+            color: #000;
+            font-family: Montserrat;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 117.9%; /* 40.086px */
+          "
+        >
+          Занимайтесь личными делами, пока ваш автомобиль зарабатывает деньги
+        </div>
+      </div>
+
+      <div id="slideContainer">
+        <div id="textbox">
+          <div
+            style="
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              color: #ad304b;
+              font-family: Montserrat;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: uppercase;
+            "
+          >
+            Доход
+          </div>
+          <div
+            style="
+              position: absolute;
+              top: 35px;
+              left: 0px;
+              width: 759px;
+              color: #000;
+              font-family: Montserrat;
+              font-size: 34px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 135.4%; /* 46.036px
+          */
+            "
+          >
+            Узнайте,
+            <span style="color: #ad304b"
+              >сколько вы можете<br />зарабатывать</span
+            >
+            каждый месяц
+          </div>
+
+          <div
+            style="
+              position: absolute;
+              top: 160px;
+              left: 0px;
+              width: 630px;
+              color: #6c6c6c;
+              font-family: Montserrat;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 151.9%; /* 33.418px */
+            "
+          >
+            Доходы от автомобилей различаются в зависимости от марки, модели,
+            доступности календаря и рынка. Показанные цифры доходов и информация
+            об автомобиле предоставлены реальными владельцами на DriveShare.
+          </div>
+        </div>
+        <div id="arrowLeft"><svg
+          style="position: absolute; top: 232px; left: 1111px; cursor: pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="30"
+          viewBox="0 0 17 30"
+          fill="none"
+        >
+          <path
+            d="M0.585786 16.4142C-0.195262 15.6332 -0.195262 14.3668 0.585786 13.5858L13.3137 0.857864C14.0948 0.0768156 15.3611 0.0768156 16.1421 0.857864C16.9232 1.63891 16.9232 2.90524 16.1421 3.68629L4.82843 15L16.1421 26.3137C16.9232 27.0948 16.9232 28.3611 16.1421 29.1421C15.3611 29.9232 14.0948 29.9232 13.3137 29.1421L0.585786 16.4142ZM4 17H2V13H4V17Z"
+            fill="black"
+          />
+        </svg></div>
+        <div id="arrowRight"><svg
+          
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="30"
+          viewBox="0 0 17 30"
+          fill="none"
+          style="position: absolute; top: 232px; left: 1786px; cursor: pointer"
+        >
+          <path
+            d="M16.4142 16.4142C17.1953 15.6332 17.1953 14.3668 16.4142 13.5858L3.68629 0.857864C2.90524 0.0768156 1.63891 0.0768156 0.857864 0.857864C0.0768156 1.63891 0.0768156 2.90524 0.857864 3.68629L12.1716 15L0.857864 26.3137C0.0768156 27.0948 0.0768156 28.3611 0.857864 29.1421C1.63891 29.9232 2.90524 29.9232 3.68629 29.1421L16.4142 16.4142ZM13 17H15V13H13V17Z"
+            fill="black"
+          />
+        </svg></div>
+        <div class="slide active">
+          <div class="sum">95 000 ₽</div>
+          <div class="income">Доход в месяц</div>
+          <div class="model">Mercedes-Benz E 200</div>
+          <div class="year">2020</div>
+          <img class="imgslide" src="images/image 12.png" />
+        </div>
+        <div class="slide">
+          <div class="sum">55 000 ₽</div>
+          <div class="income">Доход в месяц</div>
+          <div class="model">Hyundai Solaris</div>
+          <div class="year">2021</div>
+          <img class="imgslide" src="images/image 9.png" />
+        </div>
+        <div class="slide">
+          <div class="sum">85 000 ₽</div>
+          <div class="income">Доход в месяц</div>
+          <div class="model">Kia К5</div>
+          <div class="year">2020</div>
+          <img class="imgslide" src="images/image 10.png" />
+        </div>
+      </div>
+
+      <div id="time">
+        <img
+          src="images/thom-holmes-J2e34-1CVVs-unsplash 1.png"
+          style="border-radius: 30px 0px 0px 30px"
+        />
+        <div
+          style="
+            position: absolute;
+            top: 68px;
+            right: 84px;
+            width: 732px;
+
+            color: #000;
+            font-family: Montserrat;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135.4%;
+          "
+        >
+          <span style="color: #ad304b">Сейчас самое время.</span><br />Станьте
+          арендодателем и увеличьте<br />свой доход.
+        </div>
+        <div
+          style="
+            position: absolute;
+            top: 246px;
+            right: 84px;
+            width: 732px;
+            color: #6c6c6c;
+
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135.4%;
+          "
+        >
+          Время, когда Вы не за рулем, никогда не было более ценным. Когда Вы
+          присоединяетесь к крупнейшему рынку совместного использования
+          автомобилей, Вы получаете шанс зарабатывать больше, даже если это
+          всего лишь дополнительный доход.
+
+          <br /><br />Станьте арендодателем DriveShare и откройте мир
+          возможностей.
+        </div>
+        <div
+          id="shareButton"
+          style="
+            width: 249px;
+            height: 85px;
+            flex-shrink: 0;
+            background-color: #ad304b;
+            position: absolute;
+            top: 558px;
+            left: 684px;
+            border-radius: 25px;
+          "
+        >
+          <div
+            style="
+              color: #fff;
+              position: absolute;
+              top: 29px;
+              left: 23px;
+              font-family: Montserrat;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            "
+          >
+            Сдать авто
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            style="position: absolute; top: 25px; left: 185px"
+          >
+            <circle
+              cx="17.5"
+              cy="17.5"
+              r="16.9"
+              stroke="white"
+              stroke-width="1.2"
+            />
+            <path
+              d="M9 17C8.44772 17 8 17.4477 8 18C8 18.5523 8.44772 19 9 19L9 17ZM26.7071 18.7071C27.0976 18.3166 27.0976 17.6834 26.7071 17.2929L20.3431 10.9289C19.9526 10.5384 19.3195 10.5384 18.9289 10.9289C18.5384 11.3195 18.5384 11.9526 18.9289 12.3431L24.5858 18L18.9289 23.6569C18.5384 24.0474 18.5384 24.6805 18.9289 25.0711C19.3195 25.4616 19.9526 25.4616 20.3431 25.0711L26.7071 18.7071ZM9 19L26 19L26 17L9 17L9 19Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div id="footer">
+        <a href="/"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 132px"
+          >
+            Главная
+          </div></a
+        >
+        <a href="catalog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 132px"
+          >
+            Каталог
+          </div></a
+        >
+        <a href="about"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 132px"
+          >
+            О нас
+          </div></a
+        >
+        <a href="contact"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 132px"
+          >
+            Контакты
+          </div></a
+        >
+        <a href="share"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 856px"
+          >
+            Сдать авто
+          </div></a
+        >
+        <a href="description"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 856px"
+          >
+            Как это работает
+          </div></a
+        >
+        <a href="safety"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 856px"
+          >
+            Безопасность
+          </div></a
+        >
+        <a href="faq"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 856px"
+          >
+            FAQ
+          </div></a
+        >
+        <a href="blog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 1511px"
+          >
+            Блог
+          </div></a
+        >
+        <a href="upgrade"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 1511px"
+          >
+            Устойчивое развитие
+          </div></a
+        >
+        <a href="career"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 1511px"
+          >
+            Карьера
+          </div></a
+        >
+        <div id="copyright">© 2023 ООО «Драйвшер»</div>
+      </div>
+    </div>
+  </body>
+</html>

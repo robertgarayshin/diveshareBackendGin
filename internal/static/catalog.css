@@ -1,0 +1,223 @@
+@import url("https://fonts.cdnfonts.com/css/nats");
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#container {
+  width: 1920px;
+  height: 2487px;
+  background-color: #f9f9f9;
+}
+#header {
+  position: absolute;
+  height: 332px;
+  width: 1920px;
+  background-color: #FFF;
+}
+#main {
+  position: absolute;
+  left: 132px;
+  top: 47px;
+  width: 233px;
+  height: 101px;
+  color: #ad304b;
+  font-family: NATS;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#catalogContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  position: absolute;
+  top: 385px;
+  width: 1920px;
+  height: 2258px;
+  background-color: #f9f9f9;
+  justify-items: center;
+  gap: 57px 36px;
+}
+.newRect {
+  width: 528px;
+  height: 512px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 30px;
+  z-index: 10;
+}
+.newImage {
+  position: relative;
+  width: 479px;
+  top: 22px;
+  left: 22px;
+}
+
+.model {
+  position: relative;
+  top: 44.5px;
+  left: 29px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.novinka {
+  position: relative;
+  top: 34px;
+  left: 55px;
+  color: #b9b7b7;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.line {
+    position: relative;
+    top: 53px;
+    left: 32px;
+    width: 464.47px;
+height: 1px;
+background: #E2E2E2;
+
+
+}
+
+.price {
+  position: relative;
+  top: 60px;
+  left: 29px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135.4%; /* 37.912px */
+}
+.star {
+    position: relative;
+    top: 58px;
+    left: 32px;
+}
+#cityField {
+    position: absolute;
+    top: 211px;
+    left: 132px;
+    width: 503px;
+    height: 71px;
+    flex-shrink: 0;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    border-width: 1px;
+border-color: black;
+  }
+  
+  .fieldText {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .fieldText.city {
+    position: absolute;
+    top: 22px;
+    left: 51px;
+  }
+  .field {
+    width: 329.607px;
+    height: 71.016px;
+    flex-shrink: 0;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+  }
+  .field.begin {
+    position: absolute;
+    top: 211px;
+    left: 672px;
+  }
+  .fieldLogo {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+  }
+  .fieldText.date {
+    position: absolute;
+    top: 22px;
+    left: 51px;
+  }
+  .fieldText.time {
+    position: absolute;
+    top: 22px;
+    left: 188px;
+  }
+  .field.end {
+    position: absolute;
+    top: 211px;
+    left: 1038px;
+  }
+  .formText {
+    color: #b9b7b7;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .formText.city {
+    position: absolute;
+    top: 185px;
+    left: 150px;
+  }
+  .formText.begin {
+    position: absolute;
+    top: 185px;
+    left: 686px;
+  }
+  .formText.end {
+    position: absolute;
+    top: 185px;
+    left: 1064px;
+  }
+  #footer {
+    position: absolute;
+    top: 2644px;
+    width: 1920px;
+    height: 422px;
+    background-color: #FFF;
+}
+.footerText {
+    color: #AD304B;
+
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.88px;
+}
+#copyright {
+    position: absolute;
+    top: 336px;
+    left: 768px;
+    width: 384px;
+    color: #6c6c6c;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 151.9%; /* 33.418px */
+  }

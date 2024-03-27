@@ -1,0 +1,241 @@
+@import url("https://fonts.cdnfonts.com/css/nats");
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#header {
+  position: relative;
+  top: 0px;
+  width: 1920px;
+  height: 163px;
+}
+
+#headerText {
+  position: absolute;
+  left: 132px;
+  top: 31px;
+  display: flex;
+  width: 233px;
+  height: 101px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ad304b;
+  font-family: NATS;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#navbar {
+  position: relative;
+  left: 691px;
+  height: 163px;
+  width: 1229px;
+}
+
+.navbarItems li {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#navbarItem1 {
+  width: 88px;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+}
+
+#navbarItem2 {
+  width: 88px;
+  height: 34px;
+  position: absolute;
+  top: 70px;
+  left: 152px;
+}
+#item2 {
+  position: absolute;
+  top: -20px;
+}
+.dropdownText {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+  padding: 12px;
+  padding-left: 0px;
+  text-align: left;
+}
+
+#dropdownMenu {
+  width: 207px;
+  height: 300px;
+  border-radius: 15px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  text-decoration: none;
+  text-align: left;
+}
+
+#dropdownMenu li:hover {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #f2f2f2;
+}
+
+#navbarItem2:hover #dropdownMenu {
+  display: block;
+}
+
+#level2 {
+  width: 207px;
+  height: 300px;
+  border-radius: 15px;
+  display: none;
+  position: absolute;
+  top: -30px;
+  left: 230px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdownText.comf:hover #level2 {
+  display: block;
+}
+
+#navbarItem3 {
+  width: fit-content;
+  position: absolute;
+  top: 70px;
+  left: 320px;
+}
+
+#navbarItem4 {
+  position: absolute;
+  top: 70px;
+  left: 545px;
+}
+
+#navbarItem5 {
+  position: absolute;
+  top: 70px;
+  left: 741px;
+}
+
+#navbarItem6 {
+  position: absolute;
+  top: 55px;
+  left: 952px;
+  border-radius: 13px;
+  border: 1px solid #000;
+  width: 104px;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+#headText {
+  position: absolute;
+  top: 248px;
+  left: 386px;
+  width: 1148px;
+  color: #000;
+
+  font-family: Montserrat;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 111.9%; /* 85.044px */
+}
+
+#head2Text {
+  position: absolute;
+  top: 467px;
+  left: 493px;
+  width: 935px;
+  color: #000;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 111.9%; /* 44.76px */
+}
+
+.hText {
+  width: 1148px;
+  color: #000;
+
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 129.9%; /* 51.96px */
+}
+.text {
+  position: relative;
+  top: 18px;
+  left: 0px;
+  width: 1148px;
+  color: #6c6c6c;
+  text-align: justify;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 151.9%; /* 33.418px */
+}
+#footer {
+  position: absolute;
+  top: calc(2713px - 422px);
+  width: 1920px;
+  height: 422px;
+  background-color: #fff;
+}
+.footerText {
+  color: #ad304b;
+
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.88px;
+}
+#copyright {
+  position: absolute;
+  top: 336px;
+  left: 768px;
+  width: 384px;
+  color: #6c6c6c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 151.9%; /* 33.418px */
+}

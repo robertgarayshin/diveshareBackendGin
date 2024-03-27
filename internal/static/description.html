@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Как это работает - Driveshare</title>
+    <link rel="stylesheet" href="src/styles/description.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>{{.Style}}</style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <a href="/"><div id="headerText">DRIVESHARE</div></a>
+        <div id="navbar">
+          <ul class="navbarItems">
+            <a href="/"><li id="navbarItem1">Главная</li></a>
+            <li id="navbarItem2">
+              <a href="catalog"><p id="item2">Каталог</p></a>
+              <ul id="dropdownMenu">
+                <a href="catalog"
+                  ><li class="dropdownText ec">Эконом</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText comf">
+                    Комфорт
+                    <ul id="level2">
+                      <a href="catalog"
+                        ><li class="dropdownText">Suzuki</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Toyota</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Volvo</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Москвич</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Nissan</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Opel</li></a
+                      >
+                    </ul>
+                  </li></a
+                >
+                <a href="catalog"><li class="dropdownText">Бизнес</li></a>
+                <a href="catalog"><li class="dropdownText">Premium</li></a>
+                <a href="catalog"
+                  ><li class="dropdownText">Внедорожники</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText">Уникальные</li></a
+                >
+              </ul>
+            </li>
+            <a href="share"><li id="navbarItem3">Сдать авто</li></a>
+            <a href="about"><li id="navbarItem4">О нас</li></a>
+            <a href="contact"><li id="navbarItem5">Контакты</li></a>
+            <li id="navbarItem6">войти</li>
+          </ul>
+        </div>
+      </div>
+      <div id="mainImage">
+        <img
+          src="images/stylish-businessman-standing-near-the-car-and-use-the-laptop 1.png"
+        />
+        <div id="imageForm">
+          <div id="imgText">
+            Арендуйте автомобиль<br />
+            <span
+              style="
+                color: #ad304b;
+                font-family: Montserrat;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 132.9%;
+              "
+            >
+              за несколько секунд
+            </span>
+          </div>
+          <div class="formText city">Город</div>
+          <div id="cityField">
+            <svg
+              class="fieldLogo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="23"
+              viewBox="0 0 17 23"
+              fill="none"
+            >
+              <path
+                d="M8.27148 10.5017C7.51372 10.5017 6.787 10.2105 6.25118 9.69226C5.71536 9.17398 5.41434 8.47105 5.41434 7.73809C5.41434 7.00514 5.71536 6.30221 6.25118 5.78393C6.787 5.26565 7.51372 4.97449 8.27148 4.97449C9.02925 4.97449 9.75597 5.26565 10.2918 5.78393C10.8276 6.30221 11.1286 7.00514 11.1286 7.73809C11.1286 8.10102 11.0547 8.46038 10.9111 8.79568C10.7676 9.13098 10.5571 9.43563 10.2918 9.69226C10.0265 9.94888 9.71151 10.1524 9.36487 10.2913C9.01822 10.4302 8.64669 10.5017 8.27148 10.5017ZM8.27148 0C6.14975 0 4.11492 0.815261 2.61463 2.26643C1.11434 3.71761 0.271484 5.68582 0.271484 7.73809C0.271484 13.5417 8.27148 22.1088 8.27148 22.1088C8.27148 22.1088 16.2715 13.5417 16.2715 7.73809C16.2715 5.68582 15.4286 3.71761 13.9283 2.26643C12.428 0.815261 10.3932 0 8.27148 0Z"
+                fill="#E2E2E2"
+              />
+            </svg>
+            <div class="fieldText city">Город</div>
+          </div>
+          <div class="formText begin">Начало</div>
+          <div class="field begin">
+            <svg
+              class="fieldLogo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="23"
+              viewBox="0 0 20 23"
+              fill="none"
+            >
+              <path
+                d="M4.44444 9.94898H10V15.4762H4.44444M17.7778 19.898H2.22222V7.73809H17.7778M17.7778 2.21088H16.6667V0H14.4444V2.21088H5.55556V0H3.33333V2.21088H2.22222C0.988889 2.21088 0 3.20578 0 4.42177V19.898C0 20.4843 0.234126 21.0467 0.650874 21.4613C1.06762 21.8759 1.63285 22.1088 2.22222 22.1088H17.7778C18.3671 22.1088 18.9324 21.8759 19.3491 21.4613C19.7659 21.0467 20 20.4843 20 19.898V4.42177C20 3.8354 19.7659 3.27306 19.3491 2.85844C18.9324 2.44382 18.3671 2.21088 17.7778 2.21088Z"
+                fill="#E2E2E2"
+              />
+            </svg>
+            <div class="fieldText date">Дата</div>
+            <div class="fieldText time">Время</div>
+            <div
+              style="
+                width: 1px;
+                height: 41.774px;
+                background: #e2e2e2;
+                position: absolute;
+                top: 14.6px;
+                left: 169.8px;
+              "
+            ></div>
+          </div>
+          <div class="formText end">Окончание</div>
+          <div class="field end">
+            <svg
+              class="fieldLogo"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="23"
+              viewBox="0 0 21 23"
+              fill="none"
+            >
+              <path
+                d="M16.0399 9.94898H10.4844V15.4762H16.0399M2.7066 19.898H18.2622V7.73809H2.7066M2.7066 2.21088H3.81771V0H6.03993V2.21088H14.9288V0H17.151V2.21088H18.2622C19.4955 2.21088 20.4844 3.20578 20.4844 4.42177V19.898C20.4844 20.4843 20.2502 21.0467 19.8335 21.4613C19.4168 21.8759 18.8515 22.1088 18.2622 22.1088H2.7066C2.11723 22.1088 1.552 21.8759 1.13525 21.4613C0.7185 21.0467 0.484375 20.4843 0.484375 19.898V4.42177C0.484375 3.8354 0.7185 3.27306 1.13525 2.85844C1.552 2.44382 2.11723 2.21088 2.7066 2.21088Z"
+                fill="#E2E2E2"
+              />
+            </svg>
+            <div class="fieldText date">Дата</div>
+            <div class="fieldText time">Время</div>
+            <div
+              style="
+                width: 1px;
+                height: 41.774px;
+                background: #e2e2e2;
+                position: absolute;
+                top: 14.6px;
+                left: 169.8px;
+              "
+            ></div>
+          </div>
+          <div id="findButton">
+            <svg
+              width="126"
+              height="30"
+              viewBox="0 0 126 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="position: relative; top: 20px; left: 276px"
+            >
+              <path
+                d="M12.98 6.84194H15.84V22.2419H12.98V6.84194ZM5.016 22.2419H2.156V6.84194H5.016V22.2419ZM13.2 15.6419H4.774V13.1999H13.2V15.6419ZM26.9799 22.2419V19.8659L26.8259 19.3599V15.2019C26.8259 14.3953 26.5839 13.7719 26.0999 13.3319C25.6159 12.8773 24.8826 12.6499 23.8999 12.6499C23.2399 12.6499 22.5872 12.7526 21.9419 12.9579C21.3112 13.1633 20.7759 13.4493 20.3359 13.8159L19.2579 11.8139C19.8886 11.3299 20.6366 10.9706 21.5019 10.7359C22.3819 10.4866 23.2912 10.3619 24.2299 10.3619C25.9312 10.3619 27.2439 10.7726 28.1679 11.5939C29.1066 12.4006 29.5759 13.6546 29.5759 15.3559V22.2419H26.9799ZM23.2839 22.3959C22.4039 22.3959 21.6339 22.2493 20.9739 21.9559C20.3139 21.6479 19.8006 21.2299 19.4339 20.7019C19.0819 20.1593 18.9059 19.5506 18.9059 18.8759C18.9059 18.2159 19.0599 17.6219 19.3679 17.0939C19.6906 16.5659 20.2112 16.1479 20.9299 15.8399C21.6486 15.5319 22.6019 15.3779 23.7899 15.3779H27.1999V17.2039H23.9879C23.0492 17.2039 22.4186 17.3579 22.0959 17.6659C21.7732 17.9593 21.6119 18.3259 21.6119 18.7659C21.6119 19.2646 21.8099 19.6606 22.2059 19.9539C22.6019 20.2473 23.1519 20.3939 23.8559 20.3939C24.5306 20.3939 25.1319 20.2399 25.6599 19.9319C26.2026 19.6239 26.5912 19.1693 26.8259 18.5679L27.2879 20.2179C27.0239 20.9073 26.5472 21.4426 25.8579 21.8239C25.1832 22.2053 24.3252 22.3959 23.2839 22.3959ZM32.9789 22.2419V10.4939H35.7289V18.2379L42.2189 10.4939H44.7269V22.2419H41.9769V14.4979L35.5089 22.2419H32.9789ZM38.6769 9.10794C37.5035 9.10794 36.6015 8.83661 35.9709 8.29394C35.3402 7.73661 35.0175 6.92994 35.0029 5.87394H36.8289C36.8435 6.40194 37.0049 6.81994 37.3129 7.12794C37.6355 7.43594 38.0829 7.58994 38.6549 7.58994C39.2122 7.58994 39.6522 7.43594 39.9749 7.12794C40.3122 6.81994 40.4882 6.40194 40.5029 5.87394H42.3729C42.3582 6.92994 42.0282 7.73661 41.3829 8.29394C40.7522 8.83661 39.8502 9.10794 38.6769 9.10794ZM50.8681 22.2419V12.1659L51.5061 12.8259H46.7321V10.4939H57.7321V12.8259H52.9801L53.6181 12.1659V22.2419H50.8681ZM59.7269 22.2419V10.4939H62.4769V18.2379L68.9669 10.4939H71.4749V22.2419H68.7249V14.4979L62.2569 22.2419H59.7269Z"
+                fill="white"
+              />
+              <path
+                d="M125.29 14.621C125.29 22.3726 119.098 28.6419 111.476 28.6419C103.855 28.6419 97.6625 22.3726 97.6625 14.621C97.6625 6.86931 103.855 0.6 111.476 0.6C119.098 0.6 125.29 6.86931 125.29 14.621Z"
+                stroke="white"
+                stroke-width="1.2"
+              />
+              <path
+                d="M104.476 14.0387C103.923 14.0387 103.476 14.4864 103.476 15.0387C103.476 15.591 103.923 16.0387 104.476 16.0387L104.476 14.0387ZM119.185 15.7458C119.575 15.3553 119.575 14.7221 119.185 14.3316L112.821 7.96763C112.43 7.5771 111.797 7.5771 111.407 7.96763C111.016 8.35815 111.016 8.99132 111.407 9.38184L117.064 15.0387L111.407 20.6956C111.016 21.0861 111.016 21.7192 111.407 22.1098C111.797 22.5003 112.43 22.5003 112.821 22.1098L119.185 15.7458ZM104.476 16.0387L118.478 16.0387L118.478 14.0387L104.476 14.0387L104.476 16.0387Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="missionContainer">
+        <div id="mission">Наша миссия</div>
+        <div id="mis">
+          Мы соединяем удобные, безопасные<br />и доступные автомобили с людьми
+        </div>
+        <img id="img1" src="images/smiling-man-driving-a-cabriolet 1.png" />
+        <img
+          id="img2"
+          src="images/young-woman-in-the-city-center-with-phone 1.png"
+        />
+        <div class="rect img1">
+          <div class="rectText">
+            <span style="color: #ad304b">Арендаторы</span> получают выгоду<br />от
+            гибкого и удобного доступа<br />к транспортному средству.
+          </div>
+        </div>
+        <div class="rect img2">
+          <div class="rectText">
+            <span style="color: #ad304b">Владельцы автомобилей</span
+            ><br />зарабатывают, когда не испытывают<br />потребности в машине.
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="whatAreWeDoing">передвигайтесь без стресса</div>
+        <div class="d01">01.</div>
+        <div class="d02">02.</div>
+        <div class="d03">03.</div>
+        <div class="text101">Страхование на время поездки</div>
+        <div class="text201">
+          Поездки с DriveShare включают страховку на срок вашего бронирования.
+          Не стоит переживать, если что-то пойдет не по плану.
+        </div>
+        <div class="text102">Служба поддержки</div>
+        <div class="text202">
+          Помощь на связи, 24/7. Мы здесь, чтобы решить проблемы в любой момент
+          вашей поездки, с раннего утра до поздней ночи.
+        </div>
+        <div class="text103">Пространство для перемен</div>
+        <div class="text203">
+          Изменились планы? Отмените бронирование в течение 1 часа после
+          бронирования или более чем за 24 часа до начала поездки без комиссии.
+        </div>
+      </div>
+      <div id="footer">
+        <a href="/"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 132px"
+          >
+            Главная
+          </div></a
+        >
+        <a href="catalog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 132px"
+          >
+            Каталог
+          </div></a
+        >
+        <a href="about"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 132px"
+          >
+            О нас
+          </div></a
+        >
+        <a href="contact"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 132px"
+          >
+            Контакты
+          </div></a
+        >
+        <a href="share"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 856px"
+          >
+            Сдать авто
+          </div></a
+        >
+        <a href="description"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 856px"
+          >
+            Как это работает
+          </div></a
+        >
+        <a href="safety"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 856px"
+          >
+            Безопасность
+          </div></a
+        >
+        <a href="faq"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 856px"
+          >
+            FAQ
+          </div></a
+        >
+        <a href="blog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 1511px"
+          >
+            Блог
+          </div></a
+        >
+        <a href="upgrade"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 1511px"
+          >
+            Устойчивое развитие
+          </div></a
+        >
+        <a href="career"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 1511px"
+          >
+            Карьера
+          </div></a
+        >
+        <div id="copyright">© 2023 ООО «Драйвшер»</div>
+      </div>
+    </div>
+  </body>
+</html>

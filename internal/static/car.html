@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chery OMODA C5 - Driveshare</title>
+    <link rel="stylesheet" href="src/styles/car.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>{{.Style}}</style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <a href="/"><div id="headerText">DRIVESHARE</div></a>
+        <div id="navbar">
+          <ul class="navbarItems">
+            <a href="/"><li id="navbarItem1">Главная</li></a>
+            <li id="navbarItem2">
+              <a href="catalog"><p id="item2">Каталог</p></a>
+              <ul id="dropdownMenu">
+                <a href="catalog"
+                  ><li class="dropdownText ec">Эконом</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText comf">
+                    Комфорт
+                    <ul id="level2">
+                      <a href="catalog"
+                        ><li class="dropdownText">Suzuki</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Toyota</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Volvo</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Москвич</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Nissan</li></a
+                      >
+                      <a href="catalog"
+                        ><li class="dropdownText">Opel</li></a
+                      >
+                    </ul>
+                  </li></a
+                >
+                <a href="catalog"><li class="dropdownText">Бизнес</li></a>
+                <a href="catalog"><li class="dropdownText">Premium</li></a>
+                <a href="catalog"
+                  ><li class="dropdownText">Внедорожники</li></a
+                >
+                <a href="catalog"
+                  ><li class="dropdownText">Уникальные</li></a
+                >
+              </ul>
+            </li>
+            <a href="share"><li id="navbarItem3">Сдать авто</li></a>
+            <a href="about"><li id="navbarItem4">О нас</li></a>
+            <a href="contact"><li id="navbarItem5">Контакты</li></a>
+            <li id="navbarItem6">войти</li>
+          </ul>
+        </div>
+      </div>
+      <img id="carImage" src="images/image 1.png" />
+      <div id="periodForm">
+        <div
+          style="
+            position: absolute;
+            top: 32px;
+            left: 41px;
+            color: #000;
+
+            font-family: Montserrat;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135.4%;
+          "
+        >
+          Период аренды
+        </div>
+        <div class="formText begin">Начало</div>
+        <div class="field begin">
+          <svg
+            class="fieldLogo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="23"
+            viewBox="0 0 20 23"
+            fill="none"
+          >
+            <path
+              d="M4.44444 9.94898H10V15.4762H4.44444M17.7778 19.898H2.22222V7.73809H17.7778M17.7778 2.21088H16.6667V0H14.4444V2.21088H5.55556V0H3.33333V2.21088H2.22222C0.988889 2.21088 0 3.20578 0 4.42177V19.898C0 20.4843 0.234126 21.0467 0.650874 21.4613C1.06762 21.8759 1.63285 22.1088 2.22222 22.1088H17.7778C18.3671 22.1088 18.9324 21.8759 19.3491 21.4613C19.7659 21.0467 20 20.4843 20 19.898V4.42177C20 3.8354 19.7659 3.27306 19.3491 2.85844C18.9324 2.44382 18.3671 2.21088 17.7778 2.21088Z"
+              fill="#E2E2E2"
+            />
+          </svg>
+          <div class="fieldText date">Дата</div>
+          <div class="fieldText time">Время</div>
+          <div
+            style="
+              width: 1px;
+              height: 41.774px;
+              background: #e2e2e2;
+              position: absolute;
+              top: 18px;
+              left: 221px;
+            "
+          ></div>
+        </div>
+        <div class="formText end">Окончание</div>
+        <div class="field end">
+          <svg
+            class="fieldLogo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="23"
+            viewBox="0 0 21 23"
+            fill="none"
+          >
+            <path
+              d="M16.0399 9.94898H10.4844V15.4762H16.0399M2.7066 19.898H18.2622V7.73809H2.7066M2.7066 2.21088H3.81771V0H6.03993V2.21088H14.9288V0H17.151V2.21088H18.2622C19.4955 2.21088 20.4844 3.20578 20.4844 4.42177V19.898C20.4844 20.4843 20.2502 21.0467 19.8335 21.4613C19.4168 21.8759 18.8515 22.1088 18.2622 22.1088H2.7066C2.11723 22.1088 1.552 21.8759 1.13525 21.4613C0.7185 21.0467 0.484375 20.4843 0.484375 19.898V4.42177C0.484375 3.8354 0.7185 3.27306 1.13525 2.85844C1.552 2.44382 2.11723 2.21088 2.7066 2.21088Z"
+              fill="#E2E2E2"
+            />
+          </svg>
+          <div class="fieldText date">Дата</div>
+          <div class="fieldText time">Время</div>
+          <div
+            style="
+              width: 1px;
+              height: 41.774px;
+              background: #e2e2e2;
+              position: absolute;
+              top: 18px;
+              left: 221px;
+            "
+          ></div>
+        </div>
+
+        <div
+          id="button"
+          style="
+            position: absolute;
+            top: 385px;
+            left: 41px;
+            border-radius: 20px;
+            width: 429px;
+            height: 85px;
+            flex-shrink: 0;
+            background-color: #ad304b;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              width: 192px;
+              height: 29px;
+              flex-direction: column;
+              justify-content: center;
+              flex-shrink: 0;
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              position: absolute;
+              top: 28px;
+              left: 94px;
+            "
+          >
+            Забронировать
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            style="position: absolute; top: 25px; left: 299px"
+          >
+            <circle
+              cx="17.5"
+              cy="17.5"
+              r="16.9"
+              stroke="white"
+              stroke-width="1.2"
+            />
+            <path
+              d="M9 17C8.44772 17 8 17.4477 8 18C8 18.5523 8.44772 19 9 19L9 17ZM26.7071 18.7071C27.0976 18.3166 27.0976 17.6834 26.7071 17.2929L20.3431 10.9289C19.9526 10.5384 19.3195 10.5384 18.9289 10.9289C18.5384 11.3195 18.5384 11.9526 18.9289 12.3431L24.5858 18L18.9289 23.6569C18.5384 24.0474 18.5384 24.6805 18.9289 25.0711C19.3195 25.4616 19.9526 25.4616 20.3431 25.0711L26.7071 18.7071ZM9 19L26 19L26 17L9 17L9 19Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div
+          style="
+            width: 429px;
+            height: 1px;
+            background: #e2e2e2;
+            position: absolute;
+            top: 523px;
+            left: 41px;
+          "
+        ></div>
+        <div id="price">от 3300 ₽ / сутки</div>
+      </div>
+      <div id="model">
+        <div
+          id="name"
+          style="
+            position: absolute;
+            top: 31px;
+            left: 44px;
+            color: #000;
+
+            font-family: Montserrat;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          "
+        >
+          Chery OMODA C5, 2022
+        </div>
+        <div id="rating">5</div>
+        <div id="stars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="118"
+            height="17"
+            viewBox="0 0 118 17"
+            fill="none"
+          >
+            <path
+              d="M10.2061 13.8916C10.4903 13.7477 10.826 13.7477 11.1101 13.8916L15.2223 15.9752C15.9976 16.3681 16.8705 15.6529 16.6378 14.8154L15.6827 11.3784C15.5709 10.9764 15.7206 10.5473 16.058 10.302L19.1043 8.08655C19.8581 7.53829 19.518 6.34772 18.5883 6.28042L14.2178 5.96404C13.8674 5.93868 13.5561 5.73135 13.3976 5.41788L11.5505 1.76494C11.1806 1.03325 10.1357 1.03325 9.76571 1.76494L7.91867 5.41788C7.76017 5.73135 7.44881 5.93868 7.09846 5.96404L2.72425 6.28069C1.79495 6.34796 1.45453 7.53764 2.20759 8.08631L5.24941 10.3025C5.5859 10.5477 5.73529 10.9757 5.62445 11.377L4.67375 14.8191C4.44254 15.6562 5.31495 16.3699 6.08963 15.9774L10.2061 13.8916Z"
+              fill="#AD304B"
+            />
+            <path
+              d="M34.2061 13.8916C34.4903 13.7477 34.826 13.7477 35.1101 13.8916L39.2223 15.9752C39.9976 16.3681 40.8705 15.6529 40.6378 14.8154L39.6827 11.3784C39.5709 10.9764 39.7206 10.5473 40.058 10.302L43.1043 8.08655C43.8581 7.53829 43.518 6.34772 42.5883 6.28042L38.2178 5.96404C37.8674 5.93868 37.5561 5.73135 37.3976 5.41788L35.5505 1.76494C35.1806 1.03325 34.1357 1.03325 33.7657 1.76494L31.9187 5.41788C31.7602 5.73135 31.4488 5.93868 31.0985 5.96404L26.7243 6.28069C25.795 6.34796 25.4545 7.53764 26.2076 8.08631L29.2494 10.3025C29.5859 10.5477 29.7353 10.9757 29.6245 11.377L28.6737 14.8191C28.4425 15.6562 29.3149 16.3699 30.0896 15.9774L34.2061 13.8916Z"
+              fill="#AD304B"
+            />
+            <path
+              d="M58.2061 13.8916C58.4903 13.7477 58.826 13.7477 59.1101 13.8916L63.2223 15.9752C63.9976 16.3681 64.8705 15.6529 64.6378 14.8154L63.6827 11.3784C63.5709 10.9764 63.7206 10.5473 64.058 10.302L67.1043 8.08655C67.8581 7.53829 67.518 6.34772 66.5883 6.28042L62.2178 5.96404C61.8674 5.93868 61.5561 5.73135 61.3976 5.41788L59.5505 1.76494C59.1806 1.03325 58.1357 1.03325 57.7657 1.76494L55.9187 5.41788C55.7602 5.73135 55.4488 5.93868 55.0985 5.96404L50.7243 6.28069C49.795 6.34796 49.4545 7.53764 50.2076 8.08631L53.2494 10.3025C53.5859 10.5477 53.7353 10.9757 53.6245 11.377L52.6737 14.8191C52.4425 15.6562 53.3149 16.3699 54.0896 15.9774L58.2061 13.8916Z"
+              fill="#AD304B"
+            />
+            <path
+              d="M82.2061 13.8916C82.4903 13.7477 82.826 13.7477 83.1101 13.8916L87.2223 15.9752C87.9976 16.3681 88.8705 15.6529 88.6378 14.8154L87.6827 11.3784C87.5709 10.9764 87.7206 10.5473 88.058 10.302L91.1043 8.08655C91.8581 7.53829 91.518 6.34772 90.5883 6.28042L86.2178 5.96404C85.8674 5.93868 85.5561 5.73135 85.3976 5.41788L83.5505 1.76494C83.1806 1.03325 82.1357 1.03325 81.7657 1.76494L79.9187 5.41788C79.7602 5.73135 79.4488 5.93868 79.0985 5.96404L74.7243 6.28069C73.795 6.34796 73.4545 7.53764 74.2076 8.08631L77.2494 10.3025C77.5859 10.5477 77.7353 10.9757 77.6245 11.377L76.6737 14.8191C76.4425 15.6562 77.3149 16.3699 78.0896 15.9774L82.2061 13.8916Z"
+              fill="#AD304B"
+            />
+            <path
+              d="M106.206 13.8916C106.49 13.7477 106.826 13.7477 107.11 13.8916L111.222 15.9752C111.998 16.3681 112.87 15.6529 112.638 14.8154L111.683 11.3784C111.571 10.9764 111.721 10.5473 112.058 10.302L115.104 8.08655C115.858 7.53829 115.518 6.34772 114.588 6.28042L110.218 5.96404C109.867 5.93868 109.556 5.73135 109.398 5.41788L107.551 1.76494C107.181 1.03325 106.136 1.03325 105.766 1.76494L103.919 5.41788C103.76 5.73135 103.449 5.93868 103.098 5.96404L98.7243 6.28069C97.795 6.34796 97.4545 7.53764 98.2076 8.08631L101.249 10.3025C101.586 10.5477 101.735 10.9757 101.624 11.377L100.674 14.8191C100.443 15.6562 101.315 16.3699 102.09 15.9774L106.206 13.8916Z"
+              fill="#AD304B"
+            />
+          </svg>
+        </div>
+        <div id="reviews">11 отзывов</div>
+        <div
+          style="
+            width: 1003px;
+            height: 1px;
+            background-color: #e2e2e2;
+            position: absolute;
+            top: 168px;
+            left: 44px;
+          "
+        ></div>
+        <div id="owner">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="position: absolute; top: 3px"
+          >
+            <circle cx="25" cy="25" r="25" fill="#D9D7D7" />
+            <path
+              d="M18.1998 28.521C20.6581 27.521 23.0123 27.021 25.2623 27.021C27.5123 27.021 29.8456 27.521 32.2623 28.521C34.7206 29.4793 35.9498 30.7502 35.9498 32.3335V35.021H14.5748V32.3335C14.5748 30.7502 15.7831 29.4793 18.1998 28.521ZM29.0123 22.771C27.9706 23.8127 26.7206 24.3335 25.2623 24.3335C23.8039 24.3335 22.5539 23.8127 21.5123 22.771C20.4706 21.7293 19.9498 20.4793 19.9498 19.021C19.9498 17.5627 20.4706 16.3127 21.5123 15.271C22.5539 14.1877 23.8039 13.646 25.2623 13.646C26.7206 13.646 27.9706 14.1877 29.0123 15.271C30.0539 16.3127 30.5748 17.5627 30.5748 19.021C30.5748 20.4793 30.0539 21.7293 29.0123 22.771Z"
+              fill="#6C6C6C"
+            />
+          </svg>
+          <div
+            style="
+              position: absolute;
+              top: 0px;
+              left: 66px;
+              color: #000;
+              width: 244px;
+              font-family: Montserrat;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            "
+          >
+            Андрей Иванов
+          </div>
+          <div
+            style="
+              position: absolute;
+              top: 29px;
+              left: 66px;
+              color: #b9b7b7;
+
+              font-family: Montserrat;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            "
+          >
+            Владелец
+          </div>
+        </div>
+      </div>
+      <div id="description">
+        <div
+          style="
+            position: absolute;
+            top: 31px;
+            left: 41px;
+            color: #000;
+
+            font-family: Montserrat;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135.4%; /* 46.036px */
+          "
+        >
+          Описание от владельца
+        </div>
+      <div
+        style="
+          width: 1003px;
+          color: #000;
+
+          font-family: Montserrat;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          position: absolute;
+          top: 97px;
+          left: 44px;
+        "
+      >
+        Новый премиальный кроссовер CHERY OMODA C5 . Будем рады с вами
+        сотрудничать.Автомобиль в отличном состоянии, надежный и ухоженный,
+        вовремя получает техническое обслуживание. Салон чистый, не прокуренный.
+        Усилитель руля, мягкая подвеска, маленький расход топлива, центральный
+        передний подлокотник, электропривод зеркал, кондиционер, огромный
+        багажник а также много других необходимых опций- все, что нужно для
+        комфортных поездок и дальних путешествий. Детское автокресло. Выдача
+        круглосуточно. Возможна доставка авто (цена договорная).
+      </div></div>
+      <div id="footer">
+        <a href="/"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 132px"
+          >
+            Главная
+          </div></a
+        >
+        <a href="catalog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 132px"
+          >
+            Каталог
+          </div></a
+        >
+        <a href="about"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 132px"
+          >
+            О нас
+          </div></a
+        >
+        <a href="contact"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 132px"
+          >
+            Контакты
+          </div></a
+        >
+        <a href="share"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 856px"
+          >
+            Сдать авто
+          </div></a
+        >
+        <a href="description"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 856px"
+          >
+            Как это работает
+          </div></a
+        >
+        <a href="safety"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 856px"
+          >
+            Безопасность
+          </div></a
+        >
+        <a href="faq"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 204px; left: 856px"
+          >
+            FAQ
+          </div></a
+        >
+        <a href="blog"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 57px; left: 1511px"
+          >
+            Блог
+          </div></a
+        >
+        <a href="upgrade"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 106px; left: 1511px"
+          >
+            Устойчивое развитие
+          </div></a
+        >
+        <a href="career"
+          ><div
+            class="footerText"
+            style="position: absolute; top: 155px; left: 1511px"
+          >
+            Карьера
+          </div></a
+        >
+        <div id="copyright">© 2023 ООО «Драйвшер»</div>
+      </div>
+    </div>
+  </body>
+</html>
