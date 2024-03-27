@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/driveshare_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="driveshare_db@localhost [2]" uuid="79d514c3-a2ba-4f89-b3ee-ab7722b95f55">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/driveshare_db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -49,18 +49,20 @@ func (h *Handler) staticRegistration(c *gin.Context) {
 }
 
 func initCatalog(service *service.Service) []Auto {
-	Autos := make([]Auto, 12)
+	Autos := make([]Auto, 0)
 	cars, err := service.Car.GetAll()
 	if err != nil {
 		return nil
 	}
 
-	for i, car := range cars {
-		Autos[i].Model = car.Brand + " " + car.Model
-		Autos[i].Price = car.Price
-		Autos[i].Image = template.URL(car.Image)
-		Autos[i].New = car.Category
-		Autos[i].Id = car.Id
+	for _, car := range cars {
+		tmp := Auto{}
+		tmp.Model = car.Brand + " " + car.Model
+		tmp.Price = car.Price
+		tmp.Image = template.URL(car.Image)
+		tmp.New = car.Category
+		tmp.Id = car.Id
+		Autos = append(Autos, tmp)
 	}
 
 	return Autos

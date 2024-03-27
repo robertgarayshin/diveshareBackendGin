@@ -24,8 +24,7 @@ func (c CarPostgres) Create(car model.Car) (int, error) {
 
 func (c CarPostgres) GetAll() ([]model.Car, error) {
 	var cars []model.Car
-	query := fmt.Sprintf(`SELECT category, brand, model, owner_id, price, produced_year, 
-		status, car_rating FROM %s c ORDER BY c.id`, CarsTable)
+	query := fmt.Sprintf(`SELECT id, category, brand, model, price, image FROM %s c ORDER BY c.id DESC`, CarsTable)
 	if err := c.db.Select(&cars, query); err != nil {
 		return nil, err
 	}
