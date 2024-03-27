@@ -4,9 +4,11 @@ import (
 	"diveshareBackendGin/pkg/service"
 	"github.com/gin-gonic/gin"
 	"html/template"
+	"math/rand"
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func getWd() string {
@@ -155,6 +157,21 @@ func (h *Handler) staticCar(c *gin.Context) {
 		return
 	}
 
+	recsInit := initCatalog(h.services)
+	recs := make(map[Auto]bool)
+	for i := 0; i < 3; i++ {
+		recs[recsInit[rand.Intn(len(recsInit))]] = true
+	}
+
+	keys := make([]Auto, 0)
+	for k, _ := range recs {
+		keys = append(keys, k)
+	}
+
+	for i := range keys {
+		keys[i].Price = keys[i].Price[0:strings.Index(keys[i].Price, "/")]
+	}
+
 	carById := Auto{
 		Image: template.URL(car.Image),
 		Model: car.Brand + " " + car.Model,
@@ -172,7 +189,8 @@ func (h *Handler) staticCar(c *gin.Context) {
 	tmplData := struct {
 		Style template.CSS
 		Car   Auto
-	}{Style: template.CSS(style), Car: carById}
+		Recs  Auto
+	}{Style: template.CSS(style), Car: carById, Recs: keys[0]}
 
 	err = tmpl.Execute(c.Writer, tmplData)
 	if err != nil {

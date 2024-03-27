@@ -172,6 +172,78 @@ a {
   width: 1091px;
   height: 665px;
 }
+
+.slide.active {
+  display: block;
+  position: absolute;
+  top: 986px;
+  left: 1277px;
+  background-color: #fff;
+  width: 521px;
+  height: 528px;
+  flex-shrink: 0;
+  border-radius: 30px;
+}
+
+.sum {
+  width: 300px;
+  position: absolute;
+  top: 43px;
+  left: 60px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135.4%; /* 48.744px */
+}
+.income {
+  width: 172px;
+
+  position: absolute;
+  top: 92px;
+  left: 60px;
+  color: #b9b7b7;
+
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 151.9%;
+}
+.model {
+  width: 370px;
+
+  position: absolute;
+  top: 145px;
+  left: 60px;
+  color: #000;
+
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135.4%;
+}
+.year {
+  width: 56px;
+
+  position: absolute;
+  top: 192px;
+  left: 60px;
+  color: #b9b7b7;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135.4%;
+}
+.imgslide {
+  position: absolute;
+  top: 271px;
+  width:521px;
+  height: 263px;
+}
 #periodForm {
   position: absolute;
   top: 261px;
