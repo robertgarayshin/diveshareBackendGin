@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"diveshareBackendGin/pkg/service"
 	"github.com/gin-gonic/gin"
 	"html/template"
 	"net/http"
@@ -10,6 +11,14 @@ import (
 func getWd() string {
 	wd, _ := os.Getwd()
 	return wd
+}
+
+type Auto struct {
+	Image template.URL
+	Model string
+	New   string
+	Price string
+	Id    int
 }
 
 func (h *Handler) staticMain(c *gin.Context) {
@@ -39,28 +48,40 @@ func (h *Handler) staticRegistration(c *gin.Context) {
 
 }
 
-func (h *Handler) staticCatalog(c *gin.Context) {
-	type Auto struct {
-		Image template.URL
-		Model string
-		New   string
-		Price string
+func initCatalog(service *service.Service) []Auto {
+	Autos := make([]Auto, 12)
+	cars, err := service.Car.GetAll()
+	if err != nil {
+		return nil
 	}
 
-	Autoss := []Auto{
-		{
-			Image: template.URL("images/image 20.png"),
-			Model: "Nissan Leaf, 2017",
-			New:   "Новинка",
-			Price: "От 4792₽ / сутки",
-		},
-		{
-			Image: template.URL("images/image 1.png"),
-			Model: "Omoda C5, 2022",
-			New:   "Акция",
-			Price: "От 3398₽ / сутки",
-		},
+	for i, car := range cars {
+		Autos[i].Model = car.Brand + " " + car.Model
+		Autos[i].Price = car.Price
+		Autos[i].Image = template.URL(car.Image)
+		Autos[i].New = car.Category
+		Autos[i].Id = car.Id
 	}
+
+	return Autos
+}
+
+func (h *Handler) staticCatalog(c *gin.Context) {
+	Cars := initCatalog(h.services)
+	//Autoss := []Auto{
+	//	{
+	//		Image: template.URL("images/image 20.png"),
+	//		Model: "Nissan Leaf, 2017",
+	//		New:   "Новинка",
+	//		Price: "От 4792₽ / сутки",
+	//	},
+	//	{
+	//		Image: template.URL("images/image 1.png"),
+	//		Model: "Omoda C5, 2022",
+	//		New:   "Акция",
+	//		Price: "От 3398₽ / сутки",
+	//	},
+	//}
 
 	wd := getWd()
 	tmpl, err := template.ParseFiles(wd + "/internal/static/catalog.html")
@@ -76,7 +97,7 @@ func (h *Handler) staticCatalog(c *gin.Context) {
 	tmplData := struct {
 		Style template.CSS
 		Autos []Auto
-	}{Style: template.CSS(style), Autos: Autoss}
+	}{Style: template.CSS(style), Autos: Cars}
 	err = tmpl.Execute(c.Writer, tmplData)
 	if err != nil {
 		c.Writer.WriteHeader(http.StatusInternalServerError)
