@@ -120,7 +120,7 @@
       ></div>
       <div id="catalogContainer">
           {{range .Autos}}
-          <a href="auto"><div class="newRect">
+          <a href="{{ .Id }}"><div class="newRect">
               <img class="newImage" src="{{ .Image }}" />
               <div class="model"> {{ .Model }} </div>
               <img class="star" src="images/Star.svg" />

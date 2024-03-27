@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Chery OMODA C5 - Driveshare</title>
+    <title>{{.Car.Model}} - Driveshare</title>
     <link rel="stylesheet" href="src/styles/car.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>{{.Style}}</style>
@@ -62,7 +62,7 @@
           </ul>
         </div>
       </div>
-      <img id="carImage" src="images/image 1.png" />
+      <img id="carImage" src="{{.Car.Image}}" />
       <div id="periodForm">
         <div
           style="
@@ -202,7 +202,7 @@
             left: 41px;
           "
         ></div>
-        <div id="price">от 3300 ₽ / сутки</div>
+        <div id="price">{{.Car.Price}}</div>
       </div>
       <div id="model">
         <div
@@ -220,7 +220,7 @@
             line-height: normal;
           "
         >
-          Chery OMODA C5, 2022
+          {{.Car.Model}}
         </div>
         <div id="rating">5</div>
         <div id="stars">

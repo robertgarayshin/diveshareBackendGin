@@ -34,8 +34,8 @@ func (c CarPostgres) GetAll() ([]model.Car, error) {
 
 func (c CarPostgres) GetById(carId int) (model.Car, error) {
 	var car model.Car
-	query := fmt.Sprintf(`SELECT category, brand, model, owner_id, price, produced_year, 
-		status, car_rating FROM %s where id = $1 ORDER BY id`, CarsTable)
+	query := fmt.Sprintf(`SELECT id, category, brand, model, price, image
+		 FROM %s where id = $1`, CarsTable)
 	if err := c.db.Get(&car, query, carId); err != nil {
 		return model.Car{}, err
 	}

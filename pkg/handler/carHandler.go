@@ -22,21 +22,30 @@ import (
 // @Failure default {object} errorResponse
 // @Router /car/new [post]
 func (h *Handler) NewCar(c *gin.Context) {
-	var input model.Car
-	if err := c.BindJSON(&input); err != nil {
+	type i struct {
+		Brand    string
+		Model    string
+		Price    string
+		Category string
+	}
+	var input i
+	if err := c.Bind(&input); err != nil {
 		newErrorResponse(c, http.StatusBadRequest, err.Error())
 		return
 	}
 
-	id, err := h.services.Car.Create(input)
+	car := model.Car{
+		Category: input.Category,
+		Brand:    input.Brand,
+		Model:    input.Model,
+		Price:    input.Price,
+	}
+
+	_, err := h.services.Car.Create(car)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
-
-	c.JSON(http.StatusOK, map[string]interface{}{
-		"id": id,
-	})
 }
 
 // GetAllCars

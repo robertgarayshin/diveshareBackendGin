@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма добавления автомобиля</title>
+</head>
+<body>
+
+<h2>Добавить новый автомобиль</h2>
+
+<form id="carForm" action="/car/new" method="post">
+  <div>
+    <label for="Brand">Марка:</label>
+    <input type="text" id="Brand" name="Brand" required>
+  </div>
+  <div>
+    <label for="Model">Модель:</label>
+    <input type="text" id="Model" name="Model" required>
+  </div>
+  <div>
+    <label for="Price">Цена:</label>
+    <input type="text" id="Price" name="Price" required>
+  </div>
+  <div>
+    <label for="Category">Категория:</label>
+    <select id="Category" name="Category" required>
+      <option value="">Выберите категорию</option>
+      <option value="Новинка">Новинка</option>
+      <option value="Акция">Акция</option>
+    </select>
+  </div>
+  <button type="submit">Отправить</button>
+</form>
+<script>
+  document.getElementById("carForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+    var form = event.target;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    }).then(function(response) {
+      if (response.ok) {
+        window.location.href = "http://localhost:8080/catalog"; // Редирект на страницу каталога
+      } else {
+        console.error("Ошибка при отправке формы:", response.statusText);
+      }
+    }).catch(function(error) {
+      console.error("Ошибка при отправке формы:", error);
+    });
+  });
+</script>
+</body>
+</html>

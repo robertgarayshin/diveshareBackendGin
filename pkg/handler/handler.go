@@ -74,7 +74,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		review.DELETE("/:id", h.DeleteReview)
 	}
 	router.GET("/catalog", h.staticCatalog)
-	router.GET("/auto", h.staticCar)
+	router.GET("/:id", h.staticCar)
 	router.GET("/about", h.staticAbout)
 	router.GET("/blog", h.staticBlog)
 	router.GET("/career", h.staticCareer)
@@ -85,6 +85,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	router.GET("/share", h.staticShare)
 	router.GET("/upgrade", h.staticUpgrade)
 	router.GET("/", h.staticMain)
+	router.GET("/new", h.staticNew)
 
 	return router
 }

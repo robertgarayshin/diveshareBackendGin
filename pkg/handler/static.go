@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"net/http"
 	"os"
+	"strconv"
 )
 
 func getWd() string {
@@ -18,7 +19,7 @@ type Auto struct {
 	Model string
 	New   string
 	Price string
-	Id    int
+	Id    template.URL
 }
 
 func (h *Handler) staticMain(c *gin.Context) {
@@ -61,7 +62,7 @@ func initCatalog(service *service.Service) []Auto {
 		tmp.Price = car.Price
 		tmp.Image = template.URL(car.Image)
 		tmp.New = car.Category
-		tmp.Id = car.Id
+		tmp.Id = template.URL(strconv.Itoa(car.Id))
 		Autos = append(Autos, tmp)
 	}
 
@@ -70,20 +71,6 @@ func initCatalog(service *service.Service) []Auto {
 
 func (h *Handler) staticCatalog(c *gin.Context) {
 	Cars := initCatalog(h.services)
-	//Autoss := []Auto{
-	//	{
-	//		Image: template.URL("images/image 20.png"),
-	//		Model: "Nissan Leaf, 2017",
-	//		New:   "Новинка",
-	//		Price: "От 4792₽ / сутки",
-	//	},
-	//	{
-	//		Image: template.URL("images/image 1.png"),
-	//		Model: "Omoda C5, 2022",
-	//		New:   "Акция",
-	//		Price: "От 3398₽ / сутки",
-	//	},
-	//}
 
 	wd := getWd()
 	tmpl, err := template.ParseFiles(wd + "/internal/static/catalog.html")
@@ -91,11 +78,13 @@ func (h *Handler) staticCatalog(c *gin.Context) {
 		c.Writer.WriteHeader(http.StatusNotFound)
 		return
 	}
+
 	style, err := os.ReadFile(wd + "/internal/static/catalog.css")
 	if err != nil {
 		// handle error
 		return
 	}
+
 	tmplData := struct {
 		Style template.CSS
 		Autos []Auto
@@ -149,20 +138,42 @@ func (h *Handler) staticBlog(c *gin.Context) {
 }
 
 func (h *Handler) staticCar(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		return
+	}
+
 	wd := getWd()
 	tmpl, err := template.ParseFiles(wd + "/internal/static/car.html")
 	if err != nil {
 		c.Writer.WriteHeader(http.StatusNotFound)
 		return
 	}
+
+	car, err := h.services.Car.GetById(id)
+	if err != nil {
+		return
+	}
+
+	carById := Auto{
+		Image: template.URL(car.Image),
+		Model: car.Brand + " " + car.Model,
+		New:   car.Category,
+		Price: car.Price,
+		Id:    template.URL(strconv.Itoa(car.Id)),
+	}
+
 	style, err := os.ReadFile(wd + "/internal/static/car.css")
 	if err != nil {
 		// handle error
 		return
 	}
+
 	tmplData := struct {
 		Style template.CSS
-	}{Style: template.CSS(style)}
+		Car   Auto
+	}{Style: template.CSS(style), Car: carById}
+
 	err = tmpl.Execute(c.Writer, tmplData)
 	if err != nil {
 		c.Writer.WriteHeader(http.StatusInternalServerError)
@@ -311,6 +322,19 @@ func (h *Handler) staticUpgrade(c *gin.Context) {
 		Style template.CSS
 	}{Style: template.CSS(style)}
 	err = tmpl.Execute(c.Writer, tmplData)
+	if err != nil {
+		c.Writer.WriteHeader(http.StatusInternalServerError)
+	}
+}
+
+func (h *Handler) staticNew(c *gin.Context) {
+	wd := getWd()
+	tmpl, err := template.ParseFiles(wd + "/internal/static/new.html")
+	if err != nil {
+		c.Writer.WriteHeader(http.StatusNotFound)
+		return
+	}
+	err = tmpl.Execute(c.Writer, nil)
 	if err != nil {
 		c.Writer.WriteHeader(http.StatusInternalServerError)
 	}
